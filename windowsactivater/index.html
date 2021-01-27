@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,7 +8,9 @@
     </head>
     <body>
         <h1>Links for Windows Activater</h1>
-        <a href="git+https://github.com/AftershockPC/Aftershock-WindowsActivate#egg=windowsactivater-0.1.dev1">windowsactivater-0.1.dev1</a>
+		{% for tag in site.data.Aftershock-WindowsActivate.tags %}
+        <a href="git+https://github.com/AftershockPC/Aftershock-WindowsActivate@{{tag['version']}}#egg=windowsactivater-{{tag.friendly}}">windowsactivater-{{tag.friendly}}</a>
         <br/>
+		{% endfor %}
     </body>
 </html>

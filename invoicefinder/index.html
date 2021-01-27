@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,7 +8,9 @@
     </head>
     <body>
         <h1>Links for Invoice Finder</h1>
-        <a href="git+https://github.com/AftershockPC/Aftershock-InvoiceFinder#egg=invoicefinder-0.1.dev1">invoicefinder-0.1.dev1</a>
+		{% for tag in site.data.Aftershock-InvoiceFinder.tags %}
+        <a href="git+https://github.com/AftershockPC/Aftershock-InvoiceFinder@{{tag['version']}}#egg=invoicefinder-{{tag.friendly}}">invoicefinder-{{tag.friendly}}</a>
         <br/>
+		{% endfor %}
     </body>
 </html>

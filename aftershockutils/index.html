@@ -8,8 +8,8 @@
     </head>
     <body>
         <h1>Links for Automation Utilities</h1>
-        {% for tag in site.data.aftershockutils.tags %}
-        <a href="git+https://github.com/AftershockPC/Aftershock-AutomationUtilities@{{tag.version}}#egg=aftershockutils-{{tag.friendly}}">aftershockutils-{{tag.friendly}}</a>
+        {% for tag in site.data.Aftershock-AutomationUtilities.tags %}
+        <a href="git+https://github.com/AftershockPC/Aftershock-AutomationUtilities@{{tag['version']}}#egg=aftershockutils-{{tag.friendly}}">aftershockutils-{{tag.friendly}}</a>
         <br/>
         {% endfor %}
     </body>

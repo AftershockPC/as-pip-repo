@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,7 +8,9 @@
     </head>
     <body>
         <h1>Links for Label Generator</h1>
-        <a href="git+https://github.com/AftershockPC/Aftershock-LabelGenerator#egg=labelgenerator-0.1.dev1">labelgenerator-0.1.dev1</a>
+		{% for tag in site.data.Aftershock-LabelGenerator.tags %}
+        <a href="git+https://github.com/AftershockPC/Aftershock-LabelGenerator@{{tag['version']}}#egg=labelgenerator-{{tag.friendly}}">labelgenerator-{{tag.friendly}}</a>
         <br/>
+		{% endfor %}
     </body>
 </html>

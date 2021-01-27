@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,7 +8,9 @@
     </head>
     <body>
         <h1>Links for desktop_automation</h1>
-        <a href="git+https://github.com/AftershockPC/Desktop-Automation@v0.1#egg=desktop_automation-0.1">desktop_automation-0.1</a>
+		{% for tag in site.data.Desktop-Automation.tags %}
+        <a href="git+https://github.com/AftershockPC/Desktop-Automation@{{tag['version']}}#egg=desktop_automation-{{tag.friendly}}">desktop_automation-{{tag.friendly}}</a>
         <br/>
+		{% endfor %}
     </body>
 </html>

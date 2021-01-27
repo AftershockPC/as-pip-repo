@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,7 +8,9 @@
     </head>
     <body>
         <h1>Links for TemperatureMonitor</h1>
-        <a href="git+https://github.com/AftershockPC/Aftershock-TemperatureMonitor#egg=tempmonitor-0.1.dev1">tempmonitor-0.1.dev1</a>
+		{% for tag in site.data.Aftershock-TemperatureMonitor.tags %}
+        <a href="git+https://github.com/AftershockPC/Aftershock-TemperatureMonitor@{{tag['version']}}#egg=tempmonitor-{{tag.friendly}}">tempmonitor-{{tag.friendly}}</a>
         <br/>
+		{% endfor %}
     </body>
 </html>
